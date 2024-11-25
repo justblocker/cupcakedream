@@ -214,3 +214,8 @@ body {
   height: auto;
   max-width: 600px;
 }
+
+.nav-quadrant.nav-left,
+.nav-quadrant.nav-right {
+  cursor: pointer;
+}
