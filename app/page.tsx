@@ -55,7 +55,7 @@ export default function Home() {
   return (
     <div className="page-wrapper">
       <nav className="navbar">
-        <div className="cloud-banner cloud-banner-fg">
+        <div className="cloud-banner">
           <img 
             src="/cupcake-dream-logo.svg" 
             alt="Cupcake Dream Logo" 
