@@ -102,6 +102,7 @@ export default function Home() {
         </div>
       </nav>
       <div className="hero-container">
+        <div className="hero-stars" />
         <div className="hero-nav-grid">
           <div className="nav-quadrant nav-left" onClick={handlePrev}>
             <img src="/arrow-left.svg" alt="Previous" className="nav-arrow" />
