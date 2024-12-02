@@ -199,7 +199,7 @@ export default function Home() {
               <a href="https://facebook.com/cupcakedreamllc" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-facebook-f social-icon"></i>
               </a>
-              <a href="https://instagram.com/cupcakedreamllc" target="_blank" rel="noopener noreferrer">
+              <a href="https://instagram.com/cupcakedreamshop" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-instagram social-icon"></i>
               </a>
             </div>
