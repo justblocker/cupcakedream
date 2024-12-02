@@ -588,6 +588,14 @@ p {
 
 /* Mobile **************************************************************************/
 @media screen and (max-width: 479px) {
+  h2 {
+    font-size: 32px;
+  }
+
+  .footer-section h3 {
+    font-size: 1.5rem;
+  }
+
   .cloud-footer {
     margin-top: 90vh;
   }
@@ -666,6 +674,12 @@ p {
     margin-top: -125px;
     height: auto;
     max-width: 500px;
+  }
+
+  .footer-bottom p {
+    font-size: 10px;
+    margin: 50px 0px 5px 0px;
+    color: #f3f3f3;
   }
 }
 
