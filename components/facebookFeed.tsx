@@ -11,9 +11,6 @@ interface FacebookPhoto {
 
 export default function FacebookFeed() {
   const [photos, setPhotos] = useState<FacebookPhoto[]>([]);
-  const ACCESS_TOKEN = process.env.NEXT_PUBLIC_FB_ACCESS_TOKEN;
-  const PAGE_ID = 'cupcakedreamllc';
-  const ALBUM_ID = '131883220228712'; // Cupcakes album ID
 
   useEffect(() => {
     const fetchPhotos = async () => {
