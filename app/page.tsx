@@ -1,5 +1,8 @@
 'use client';
+
 import { useState } from 'react';
+import FacebookFeed from '../components/facebookFeed';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 interface CarouselItem {
   titleTop: React.ReactNode;
@@ -29,7 +32,7 @@ const carouselContent: CarouselItem[] = [
   },
   {
     titleTop: "Sweeten your day",
-    titleBottom: <>with a <strong className="serif-bold">POP</strong></>,
+    titleBottom: <>with a <strong className="serif-bold">CAKE POP</strong></>,
     image: "/cake-pops-5.png",
     prices: [
       { price: "$2.5", description: "Each" },
@@ -149,11 +152,56 @@ export default function Home() {
         </div>
       </div>
       <img 
-        src="/cloud-footer-1.svg" 
+        src="/cloud-footer-2.svg" 
         alt="Cloud Footer" 
-        className="cloud-footer"
+        className="cloud-footer svg-image"
       />
-      <div className="content-section"></div>
+      <div className="content-section">
+        <div className="content-container">
+          <h2>Dreams Fulfilled</h2>
+          <FacebookFeed />        
+        </div>
+        <div className="content-container-2">
+          <h2>The Dream Team</h2>
+          <p>The Cupcake Dream Shop is a family-owned bakery that specializes in creating custom cakes, cupcakes, cake pops, cookies, and dipped treats. Our dream is to bring joy to every customer with our sweet treats.</p>
+        </div>
+      </div>
+      <footer className="footer">
+        <div className="footer-content">
+          <div className="footer-section">
+            <h3>Contact Us</h3>
+            <a 
+              href="https://www.google.com/maps/search/?api=1&query=2861+Ward+Blvd,+Wilson,+NC+27893" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="white-underline"
+            >
+              <p>2861 Ward Blvd</p>
+              <p>Wilson, NC 27893</p>
+            </a>
+            <a href="tel:+12522061341" className="white-underline" style={{ color: 'white' }}>Phone: (252) 206-1341</a>
+          </div>
+          <div className="footer-section">
+            <h3>Hours</h3>
+            <p>Monday - Saturday: 10:30am - 6pm</p>
+            <p>Sunday: Closed</p>
+          </div>
+          <div className="footer-section">
+            <h3>Follow Us</h3>
+            <div className="social-links">
+              <a href="https://facebook.com/cupcakedreamllc" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-facebook-f social-icon"></i>
+              </a>
+              <a href="https://instagram.com/cupcakedreamllc" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-instagram social-icon"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <p>&copy; {new Date().getFullYear()} Cupcake Dream, LLC. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
   );
 }
