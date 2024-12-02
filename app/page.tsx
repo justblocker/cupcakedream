@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import FacebookFeed from '../components/facebookFeed';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import Image from 'next/image';
 
 interface CarouselItem {
   titleTop: React.ReactNode;
@@ -97,10 +98,12 @@ export default function Home() {
     <div className="page-wrapper">
       <nav className="navbar">
         <div className="cloud-banner">
-          <img 
+          <Image 
             src="/cupcake-dream-logo.svg" 
             alt="Cupcake Dream Logo" 
             className="cloud-banner-logo"
+            width={200}
+            height={200}
           />
         </div>
       </nav>
@@ -108,7 +111,7 @@ export default function Home() {
         <div className="hero-stars" />
         <div className="hero-nav-grid">
           <div className="nav-quadrant nav-left" onClick={handlePrev}>
-            <img src="/arrow-left.svg" alt="Previous" className="nav-arrow" />
+            <Image src="/arrow-left.svg" alt="Previous" className="nav-arrow" width={50} height={50} />
           </div>
           <div className="nav-quadrant nav-center-top">
             <div className={`center-content ${carouselContent[currentIndex].notice ? 'notice-layout' : ''}`}>
@@ -139,22 +142,26 @@ export default function Home() {
               key={currentIndex} 
               className={`image-container slide-${slideDirection}`}
             >
-              <img 
+              <Image 
                 src={carouselContent[currentIndex].image} 
                 alt="Cupcakes" 
                 className="cupcakes-image" 
+                width={500}
+                height={500}
               />
             </div>
           </div>
           <div className="nav-quadrant nav-right" onClick={handleNext}>
-            <img src="/arrow-right.svg" alt="Next" className="nav-arrow" />
+            <Image src="/arrow-right.svg" alt="Next" className="nav-arrow" width={50} height={50} />
           </div>
         </div>
       </div>
-      <img 
+      <Image 
         src="/cloud-footer-2.svg" 
         alt="Cloud Footer" 
         className="cloud-footer svg-image"
+        width={1000}
+        height={1000}
       />
       <div className="content-section">
         <div className="content-container">
