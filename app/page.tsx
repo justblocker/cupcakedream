@@ -148,6 +148,7 @@ export default function Home() {
                 className="cupcakes-image" 
                 width={500}
                 height={500}
+                priority
               />
             </div>
           </div>
