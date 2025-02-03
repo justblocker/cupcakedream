@@ -47,8 +47,7 @@ const carouselContent: CarouselItem[] = [
     titleBottom: <><strong className="serif-bold">DIPPED TREATS</strong></>,
     image: "/dipped-treats-1.png",
     prices: [
-      { price: "$2+", description: "Pretzel Rod" },
-      { price: "$1", description: "Marshmallow" },
+      { price: "$1.5", description: "Pretzel Rod" },
       { price: "$2.5", description: "Rice Crispy Square" },
       { price: "$3+", description: "Rice Crispy Custom Shape" },
       { price: "$9", description: "Strawberries 1/2 Dozen." },
@@ -72,7 +71,7 @@ const carouselContent: CarouselItem[] = [
     titleBottom: <><strong className="serif-bold">CAKE</strong> and eat it too.</>,
     image: "/cake-1.png",
     notice: {
-      row1: "Cakes are made to order and require 3 days notice. Fondant cakes require 1 week.",
+      row1: "Cakes are made to order and require 1 week notice.",
       row2: "50% DEPOSIT REQUIRED TO SECURE AND BEGIN ALL ORDERS.",
       row3: "Cake tastings: $20 fee includes 4 cupcakes and consultation (by appointment only)."
     },
