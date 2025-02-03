@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import Head from 'next/head';
 
 
 const geistSans = localFont({
@@ -29,6 +30,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <title>The Cupcake Dream Shop</title>
+        <meta name="description" content="Delight in our heavenly cupcakes and baked goods, crafted to make your sweetest dreams come true." />
+        <meta name="keywords" content="cupcakes, bakery, sweets, treats, Cupcake Dream, cake pops, cookies" />
+        <meta name="author" content="Jaze Media" />
+      </Head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
