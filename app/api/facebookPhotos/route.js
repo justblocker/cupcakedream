@@ -1,6 +1,6 @@
 export const GET = async () => {
   const ACCESS_TOKEN = process.env.NEXT_PUBLIC_FB_ACCESS_TOKEN;
-  const ALBUM_ID = '131883220228712'; // Cupcakes album ID
+  const ALBUM_ID = '1163521439110637'; // Cupcakes album ID
 
   try {
     const response = await fetch(
