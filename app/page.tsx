@@ -137,7 +137,7 @@ export default function Home() {
                     ))}
                     {carouselContent[currentIndex].note && (
                       <div className="flavor-note" style={{ gridColumn: '1 / -1', marginTop: '10px' }}>
-                        <span className="price">Available Flavors:</span>
+                        <span className="price">Cake Flavors:</span>
                         <span className="description">{carouselContent[currentIndex].note}</span>
                       </div>
                     )}
