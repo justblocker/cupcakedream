@@ -84,6 +84,7 @@ const carouselContent: CarouselItem[] = [
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slideDirection, setSlideDirection] = useState<'top' | 'right' | 'bottom'>('right');
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const handleNext = () => {
     setSlideDirection('right');
@@ -93,6 +94,10 @@ export default function Home() {
   const handlePrev = () => {
     setSlideDirection('bottom');
     setCurrentIndex((prev) => (prev - 1 + carouselContent.length) % carouselContent.length);
+  };
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
   };
 
   return (
@@ -137,8 +142,22 @@ export default function Home() {
                     ))}
                     {carouselContent[currentIndex].note && (
                       <div className="flavor-note" style={{ gridColumn: '1 / -1', marginTop: '10px' }}>
-                        <span className="price">Cake Flavors:</span>
-                        <span className="description">{carouselContent[currentIndex].note}</span>
+                        <span className="note-title" onClick={toggleDropdown} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
+                          CAKE FLAVORS
+                          <span style={{ 
+                            marginLeft: '5px', 
+                            display: 'inline-block', 
+                            transform: isDropdownOpen ? 'rotate(90deg)' : 'rotate(0deg)', 
+                            transition: 'transform 0.3s' 
+                          }}>
+                            ▸
+                          </span>
+                        </span>
+                        {isDropdownOpen && (
+                          <div className="note">
+                            {carouselContent[currentIndex].note}
+                          </div>
+                        )}
                       </div>
                     )}
                   </>
