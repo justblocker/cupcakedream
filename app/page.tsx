@@ -125,7 +125,7 @@ export default function Home() {
                 <h1 className="dream-title-top">{carouselContent[currentIndex].titleTop}</h1>
                 <h1 className="dream-title-bottom">{carouselContent[currentIndex].titleBottom}</h1>
               </div>
-              <div className={`price-grid ${carouselContent[currentIndex].notice ? 'notice-grid' : ''}`}>
+              <div className={`${carouselContent[currentIndex].note ? 'price-grid-cupcakes' : 'price-grid'} ${carouselContent[currentIndex].notice ? 'notice-grid' : ''}`}>
                 {carouselContent[currentIndex].notice ? (
                   <div className="notice-message">
                     <div className="notice">{carouselContent[currentIndex].notice?.row1}</div>
@@ -145,7 +145,8 @@ export default function Home() {
                         <span className="note-title" onClick={toggleDropdown} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
                           CAKE FLAVORS
                           <span style={{ 
-                            marginLeft: '5px', 
+                            marginLeft: '5px',
+                            paddingBottom: '3px',
                             display: 'inline-block', 
                             transform: isDropdownOpen ? 'rotate(90deg)' : 'rotate(0deg)', 
                             transition: 'transform 0.3s' 
