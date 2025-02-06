@@ -15,6 +15,7 @@ interface CarouselItem {
     row2: string;
     row3: string;
   };
+  note?: string;
 }
 
 const carouselContent: CarouselItem[] = [
@@ -29,7 +30,8 @@ const carouselContent: CarouselItem[] = [
       { price: "$6", description: "Jumbo Cupcake" },
       { price: "$26", description: "Standard Dozen" },
       { price: "$6+", description: "Custom Jumbo Cupcake" }
-    ]
+    ],
+    note: " vanilla, chocolate, strawberry, lemon, carrot, r.velvet, caramel, s.caramel, pineapple, coconut, oreo, p.b.cup, birthday cake, wedding cake, key lime"
   },
   {
     titleTop: "Sweeten your day",
@@ -126,12 +128,20 @@ export default function Home() {
                     <div className="notice">{carouselContent[currentIndex].notice?.row3}</div>
                   </div>
                 ) : (
-                  carouselContent[currentIndex].prices.map((item, index) => (
-                    <div className="price-item" key={index}>
-                      <span className="price">{item.price}</span>
-                      <span className="description">{item.description}</span>
-                    </div>
-                  ))
+                  <>
+                    {carouselContent[currentIndex].prices.map((item, index) => (
+                      <div className="price-item" key={index}>
+                        <span className="price">{item.price}</span>
+                        <span className="description">{item.description}</span>
+                      </div>
+                    ))}
+                    {carouselContent[currentIndex].note && (
+                      <div className="flavor-note" style={{ gridColumn: '1 / -1', marginTop: '10px' }}>
+                        <span className="price">Available Flavors:</span>
+                        <span className="description">{carouselContent[currentIndex].note}</span>
+                      </div>
+                    )}
+                  </>
                 )}
               </div>
             </div>
